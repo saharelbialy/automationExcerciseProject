@@ -11,6 +11,7 @@ public class ShoppingCartPage extends BasePage{
     By cartKey = By.xpath("(//ul[@class=\"nav navbar-nav\"]/li[3]/a)");
 
     By allCartRows = By.xpath("//tr[contains(@id,'product-')]");
+    By cartColumn = By.xpath("//*[@id=\"cart_info_table\"]/thead/tr/td");
 
     By firstItemDescription = By.className("cart_description");
 
@@ -29,6 +30,10 @@ public class ShoppingCartPage extends BasePage{
     public int getSizeOfAddedProducts ()
     {
         return locateListOfElements(allCartRows).size();
+    }
+    public int getSizeOfColumns ()
+    {
+        return locateListOfElements(cartColumn).size();
     }
     public String getFirstProductTitle ()
     {

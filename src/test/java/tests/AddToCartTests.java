@@ -17,6 +17,7 @@ public class AddToCartTests extends BaseTests {
         ShoppingCartPage shoppingCartPage = new ShoppingCartPage(driver);
         shoppingCartPage.clickCartButton();
         Assert.assertEquals(shoppingCartPage.getSizeOfAddedProducts(), 2, "The added products should be 2");
+        Assert.assertEquals(shoppingCartPage.getSizeOfColumns(), 6, "The column size should be 6");
         Assert.assertEquals(shoppingCartPage.getFirstProductPrice(), "Rs. 500", "The 1st products price Rs.500");
         Assert.assertEquals(shoppingCartPage.getFirstProductQuantity(), "1", "The 1st product quantity is 1");
         Assert.assertEquals(shoppingCartPage.getFirstProductTotal(), "Rs. 500", "The 1st product quantity is 1");
